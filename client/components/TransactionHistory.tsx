@@ -20,7 +20,7 @@ const TransactionHistory = () => {
   const [transactionHistory, setTransactionHistory] = useState<any[]>([])
 
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       if (!isLoading && currentAccount) {
         const query = `
           *[_type=="users" && _id == "${currentAccount}"] {
