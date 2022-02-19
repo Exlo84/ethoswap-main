@@ -31,7 +31,7 @@ const Header = () => {
 
   useEffect(() => {
     if (currentAccount) {
-      ;(async () => {
+      ; (async () => {
         const query = `
         *[_type=="users" && _id == "${currentAccount}"] {
           userName,
@@ -59,30 +59,27 @@ const Header = () => {
         <div className={style.navItemsContainer}>
           <div
             onClick={() => setSelectedNav('swap')}
-            className={`${style.navItem} ${
-              selectedNav === 'swap' && style.activeNavItem
-            }`}
+            className={`${style.navItem} ${selectedNav === 'swap' && style.activeNavItem
+              }`}
           >
             Swap
           </div>
           <div
             onClick={() => setSelectedNav('pool')}
-            className={`${style.navItem} ${
-              selectedNav === 'pool' && style.activeNavItem
-            }`}
+            className={`${style.navItem} ${selectedNav === 'pool' && style.activeNavItem
+              }`}
           >
             Pool
           </div>
           <div
             onClick={() => setSelectedNav('vote')}
-            className={`${style.navItem} ${
-              selectedNav === 'vote' && style.activeNavItem
-            }`}
+            className={`${style.navItem} ${selectedNav === 'vote' && style.activeNavItem
+              }`}
           >
             Vote
           </div>
           <a
-            href='https://info.uniswap.org/#/'
+            href='https://info.uniswap.org/#/tokens/0x99676c9fa4c77848aeb2383fcfbd7e980dc25027'
             target='_blank'
             rel='noreferrer'
           >
@@ -97,7 +94,7 @@ const Header = () => {
           <div className={style.buttonIconContainer}>
             <Image src={ethLogo} alt='eth logo' height={20} width={20} />
           </div>
-          <p>Ethereum</p>
+          <p>Etho Protocol</p>
           <div className={style.buttonIconContainer}>
             <AiOutlineDown />
           </div>

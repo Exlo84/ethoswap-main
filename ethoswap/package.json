@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Exlo <exlo@live.no>",
+  "author": "Exlo",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -30,6 +30,6 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/CleverProgrammers/uniswap-clone-youtube.git"
+    "url": "https://github.com/Exlo84/ethoswap-main.git"
   }
 }

@@ -76,7 +76,7 @@ const Main = () => {
               <div className={style.currencySelectorIcon}>
                 <Image src={ethLogo} alt='eth logo' height={20} width={20} />
               </div>
-              <div className={style.currencySelectorTicker}>ETH</div>
+              <div className={style.currencySelectorTicker}>ETHO</div>
               <AiOutlineDown className={style.currencySelectorArrow} />
             </div>
           </div>

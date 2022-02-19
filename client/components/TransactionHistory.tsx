@@ -43,7 +43,7 @@ const TransactionHistory = () => {
             <div className={style.txHistoryItem} key={index}>
               <div className={style.txDetails}>
                 <Image src={ethLogo} height={20} width={15} alt='eth' />
-                {transaction.amount} Ξ sent to{' '}
+                {transaction.amount} ETHO sent to{' '}
                 <span className={style.toAddress}>
                   {transaction.toAddress.substring(0, 6)}...
                 </span>
@@ -59,12 +59,12 @@ const TransactionHistory = () => {
               </div>
               <div className={style.etherscanLink}>
                 <a
-                  href={`https://rinkeby.etherscan.io/tx/${transaction.txHash}`}
+                  href={`https://explorer.ethoprotocol.com/tx/${transaction.txHash}`}
                   target='_blank'
                   rel='noreferrer'
                   className={style.etherscanLink}
                 >
-                  View on Etherscan
+                  View on Explorer
                   <FiArrowUpRight />
                 </a>
               </div>

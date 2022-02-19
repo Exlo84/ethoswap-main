@@ -13,7 +13,7 @@ if (typeof window !== 'undefined') {
 }
 
 const getEthereumContract = () => {
-  const provider = new ethers.providers.Web3Provider(ethereum)
+  const provider = new ethers.providers.Web3Provider(web3.currentProvider)
   const signer = provider.getSigner()
   const transactionContract = new ethers.Contract(
     contractAddress,
@@ -49,16 +49,16 @@ export const TransactionProvider = ({ children }) => {
    */
   useEffect(() => {
     if (!currentAccount) return
-    ;(async () => {
-      const userDoc = {
-        _type: 'users',
-        _id: currentAccount,
-        userName: 'Unnamed',
-        address: currentAccount,
-      }
+      ; (async () => {
+        const userDoc = {
+          _type: 'users',
+          _id: currentAccount,
+          userName: 'Unnamed',
+          address: currentAccount,
+        }
 
-      await client.createIfNotExists(userDoc)
-    })()
+        await client.createIfNotExists(userDoc)
+      })()
   }, [currentAccount])
 
   const handleChange = (e, name) => {
@@ -81,7 +81,7 @@ export const TransactionProvider = ({ children }) => {
       }
     } catch (error) {
       console.error(error)
-      throw new Error('No ethereum object.')
+      throw new Error('No etho object.')
     }
   }
 
@@ -98,7 +98,7 @@ export const TransactionProvider = ({ children }) => {
       setCurrentAccount(accounts[0])
     } catch (error) {
       console.error(error)
-      throw new Error('No ethereum object.')
+      throw new Error('No etho object.')
     }
   }
 
@@ -174,7 +174,7 @@ export const TransactionProvider = ({ children }) => {
       const transactionHash = await transactionContract.publishTransaction(
         addressTo,
         parsedAmount,
-        `Transferring ETH ${parsedAmount} to ${addressTo}`,
+        `Transferring ETHO ${parsedAmount} to ${addressTo}`,
         'TRANSFER',
       )
 
