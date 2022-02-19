@@ -79,7 +79,7 @@ const Header = () => {
             Vote
           </div>
           <a
-            href='https://info.uniswap.org/#/tokens/0x99676c9fa4c77848aeb2383fcfbd7e980dc25027'
+            href='https://coinmarketcap.com/currencies/ether-1/'
             target='_blank'
             rel='noreferrer'
           >
